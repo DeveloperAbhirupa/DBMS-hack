@@ -1,0 +1,66 @@
+
+<html>
+<head>
+    <link rel="stylesheet" href="style3.css">
+    <title>good question</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Sacramento" rel="stylesheet">
+    <script
+  			  src="https://code.jquery.com/jquery-3.3.1.js"
+  			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  			  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="script1.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="container-fluid c1 " align="center">Welcome Back! Mr. Rushi<hr></div>
+<div class="container-fluid c1" align="center">You have received <span class="count"><b>200</b></span> reviews<br> Here is your Summary!</div>
+<div class="row">
+  <div class="col-sm-5 container pos" align="center">Positive FeedBack:<br>Percentage:73%
+    <br><br>Sentiment: +0.75<br><br>NLP Model Analysis:<br>{'good', 'brilliant', 'helpful', 'understanding', 'easy', 'simple','motivate','light-hearted','fun'}<br>
+
+  </div>
+  <div class="col-sm-5 container neg" align="center">Negative FeedBack:<br>Percentage:27%
+  <br><br>Sentiment: -0.23<br><br>NLP Model Analysis:<br>{'difficult', 'inaudible','strict','harsh','uninterested','bad',<br>'demotivate'}<br>
+</div>
+</div>
+
+<script>
+
+var delayInMilliseconds = 1000; //1 second
+$('.count').hide();
+setTimeout(function() {
+  $('.count').show();
+  $('.count').each(function () {
+    console.log("ENtere");
+      $(this).prop('Counter',0).animate({
+          Counter: $(this).text()
+      }, {
+          duration: 4000,
+          easing: 'swing',
+          step: function (now) {
+              $(this).text(Math.ceil(now));
+          }
+      });
+  });
+}, delayInMilliseconds);
+
+$(function() {
+   setTimeout(function() {
+     $(".fly-in-text").removeClass("hidden");
+   }, 500);
+});
+
+</script>
+
+
+</body>
+</html>
